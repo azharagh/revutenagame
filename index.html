@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revolutionary Girl Utena</title>
+    <audio id="music" hidden src="sounds/musicakio.mp3" type="audio/mpeg"></audio>
+
+<style>
+    canvas {
+        width: 79%;
+        height: 73%;
+        top: 51%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+    body {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px;
+        margin: 50px;
+        height: 100vh;
+        text-align: center;
+        overflow: hidden;
+        background-image: url(images/roseframe.png);
+        background-attachment: fixed;
+        background-size: 100% 100%;
+        background-position: center;
+        opacity: 0.89;
+    }
+    #replayButton {
+        background-color: rgb(255,200,233);
+        color: black;
+        border: 2px solid black;
+        text-align: center;
+        border-radius: 50%;
+        transition-duration: 0.4s;
+    }
+    #replayButton:hover {
+        background-color: black;
+        color: rgb(255,200,233);
+        border: 2px solid rgb(255,200,233);
+    }
+
+    #musicButton {
+        background-color: black;
+        color: rgb(255,200,233);
+        border: 2px solid rgb(255,200,233);
+        text-align: center;
+        border-radius: 50%;
+        transition-duration: 0.4s;
+    }
+
+    #musicButton:hover {
+        background-color: rgb(255,200,233);
+        color: black;
+        border: 2px solid black;
+    }
+
+</style>
+</head>
+<body>
+    <button onClick="window.location.reload();" id="replayButton">Replay</button> 
+    <button id="musicButton">Internal Clock</button>
+    <canvas id="DuelingArena"></canvas>
+    <script src="index.js" type="module"></script>
+</body>
+</html>
