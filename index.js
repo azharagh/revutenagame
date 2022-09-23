@@ -32,8 +32,8 @@ const playerBulletController = new BulletController(canvas, 3, true);
 const akioBulletController = new BulletController(canvas, 1, false);
 
 const anthy = new Anthy(372, 270);
-const players = [new Player(canvas, 3, 200, playerBulletController)];
-const akios = [new Akio(canvas, 3, 200, akioBulletController)]; 
+const players = [new Player(canvas, 3, 300, playerBulletController)];
+const akios = [new Akio(canvas, 3, 300, akioBulletController)]; 
 
 const car = new CarController(canvas); 
 
@@ -74,9 +74,9 @@ function duel() {
                     const index = players.indexOf(player);
                     players.splice(index,1);
                     music.pause(); 
-                    this.utenaDeathsound = new Audio('sounds/UtenaSound.wav');
+                    this.utenaDeathsound = new Audio('sounds/WalkingAwaySound.wav');
                     this.utenaDeathsound.play();
-                    this.utenaDeathsound.volume = 0.5; 
+                    this.utenaDeathsound.volume = 0.8; 
                 }
             }
             else {
@@ -92,34 +92,23 @@ function duel() {
 
 function displayGameOver(){
     if (isGameOver) {
-
-        if(!didWin) {
-            let utenaandanthy = new Image();
-            utenaandanthy.src = "images/utenaandanthy.png";
-            let x =  200  ;
-            let y = canvas.height - 550; 
-            let width = 400; 
-            let height = 600; 
-            ctx.drawImage(utenaandanthy, x, y, width, height);
-        }
-        
         if(didWin) {
             let stab = new Image();
             stab.src = "images/stab.png";
             let x =  10  ;
-            let y = canvas.height - 523; 
+            let y = canvas.height - canvas.height; 
             let width = 780; 
             let height = 523; 
             ctx.drawImage(stab, x, y, width, height);
         }
         else {
-            let anthandchu = new Image();
-            anthandchu.src = "images/anthandchu.png";
+            let anthywalksaway = new Image();
+            anthywalksaway.src = "images/anthywalksaway.png";
             let x =  0;
-            let y = canvas.height - 250; 
-            let width = 250; 
-            let height = 250; 
-            ctx.drawImage(anthandchu, x, y, width, height);
+            let y = canvas.height - canvas.height; 
+            let width = 800; 
+            let height = 580; 
+            ctx.drawImage(anthywalksaway, x, y, width, height);
         }
       }
 }
