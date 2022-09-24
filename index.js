@@ -32,8 +32,8 @@ const playerBulletController = new BulletController(canvas, 3, true);
 const akioBulletController = new BulletController(canvas, 1, false);
 
 const anthy = new Anthy(372, 270);
-const players = [new Player(canvas, 3, 60, playerBulletController)];
-const akios = [new Akio(canvas, 3, 3, akioBulletController)]; 
+const players = [new Player(canvas, 3, 300, playerBulletController)];
+const akios = [new Akio(canvas, 3, 300, akioBulletController)]; 
 
 const car = new CarController(canvas); 
 
